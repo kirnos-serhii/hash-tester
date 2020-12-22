@@ -42,5 +42,5 @@ jobs:
           sudo docker stop $(sudo docker ps -q)
           sudo docker rm $(sudo docker ps -aq)
           sudo docker rmi $(sudo docker images -q)
-          sudo docker pull mycoolstrongdocker/academy:latest
+          sudo docker pull serhiikirnos/hash-tester-repo:latest
           sudo docker run -p 8080:8080 -v /data/logs:/logs -d --rm serhiikirnos/hash-tester-repo:latest
