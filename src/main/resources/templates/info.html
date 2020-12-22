@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <div th:replace="head :: headOfProject('About')"></div>
+</head>
+
+<body>
+<div th:replace="header :: header()"></div>
+
+    <div class="container" style="height: 100vh;">
+        <div class="row mb-1">
+            <div class="col-12">
+                <h3>
+                    Project info
+                </h3>
+            </div>
+        </div>
+        <div class="row mb-1">
+            <div class="col-12">
+                <p class="border bg-white">This program designed for testing hash algoritms for speed.</p>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h5>
+                    Сonsidered algorithms
+                </h5>
+                <table class="table table-sm table-striped w-25">
+                    <colgroup>
+                        <col width="30%">
+                        <col width="70%">
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td><a href="https://en.wikipedia.org/wiki/Cyclic_redundancy_check#CRC-32_algorithm">Crc32</a></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">2</th>
+                        <td><a href="https://en.wikipedia.org/wiki/SHA-2">Sha512</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+<div th:replace="footer :: footer"></div>
+
+</body>
+</html>

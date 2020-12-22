@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <div th:replace="head :: headOfProject('Dashboard')"></div>
+</head>
+<body class="bg-light">
+<div th:replace="header :: header()"></div>
+
+<div class="container-fluid">
+    <div class="row pt-2" id="error-container">
+
+    </div>
+    <div class="row pt-2">
+        <div class="col-4">
+            <div class="form-group">
+                <label for="numberElements">Number elements</label>
+                <input type="number" class="form-control" step="1" id="numberElements"/>
+            </div>
+            <div class="form-group">
+                <label for="dataGeneration">Data generation</label>
+                <select id="dataGeneration" class="form-control">
+                    <option value="SEQUENCE">SEQUENCE</option>
+                    <option value="RANDOM">RANDOM</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <div class="form-group">
+                    <label for="algorithm">Algorithm</label>
+                    <select id="algorithm" class="form-control">
+                        <option value="CRC16">CRC16</option>
+                        <option value="CRC32">CRC32</option>
+                        <option value="SHA512">SHA-512</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="numberElements">Start from</label>
+                <input type="text" class="form-control" id="startAt"/>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name='cut' id="cut16" value="CUT16" checked>
+                <label class="form-check-label" for="cut16">
+                    16 bit
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name='cut' id="cut32" value="CUT32">
+                <label class="form-check-label" for="cut32">
+                    32 bit
+                </label>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" id="perform-btn">Perform</button>
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="container">
+                <div class="row mb-1">
+                    <div class="col-12">
+                        <button type="button" id="clean" class="btn btn-secondary float-right">Clean</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <table id="result-table" class="table">
+                            <thead>
+                            <tr>
+                                <th>Algorithm</th>
+                                <th>Bits</th>
+                                <th>Number elements</th>
+                                <th>Execution time(ms)</th>
+                                <th>Number of collisions</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div th:replace="footer :: footer"></div>
+
+<script src="../../static/js/calculate.js" th:src="@{/js/calculate.js}"></script>
+</body>
+</html>
