@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <div th:replace="head :: headOfProject('Dashboard')"></div>
+    <div th:replace="/head :: headOfProject('Dashboard')"></div>
 </head>
 <body class="bg-light">
-<div th:replace="header :: header()"></div>
+<div th:replace="/header :: header()"></div>
 
 <div class="container-fluid">
     <div class="row pt-2" id="error-container">
@@ -84,7 +84,7 @@
 
 </div>
 
-<div th:replace="footer :: footer"></div>
+<div th:replace="/footer :: footer"></div>
 
 <script src="../../static/js/calculate.js" th:src="@{/js/calculate.js}"></script>
 </body>

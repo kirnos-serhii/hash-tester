@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <div th:replace="head :: headOfProject('About')"></div>
+    <div th:replace="/head :: headOfProject('About')"></div>
 </head>
 
 <body>
-<div th:replace="header :: header()"></div>
+<div th:replace="/header :: header()"></div>
 
     <div class="container" style="height: 100vh;">
         <div class="row mb-1">
@@ -47,7 +47,7 @@
         </div>
     </div>
 
-<div th:replace="footer :: footer"></div>
+<div th:replace="/footer :: footer"></div>
 
 </body>
 </html>
