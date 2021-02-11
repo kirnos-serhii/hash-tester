@@ -12,4 +12,8 @@ RUN apk add --update --no-cache \
 
 VOLUME /logs
 
-ENTRYPOINT ["java","-jar","/app.jar"]
+VOLUME /key
+
+ENTRYPOINT ["java", \
+"-Dserver.ssl.key-store-password=${KEY_STORE_PASSWORD}", \
+"-jar", "/app.jar"]
