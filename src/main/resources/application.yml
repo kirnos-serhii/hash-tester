@@ -14,7 +14,6 @@ server:
     require-ssl: true
   ssl:
     key-store: key/springboot_letsencrypt.p12
-    key-store-password:
     keyStoreType: PKCS12
     keyAlias: bootalias
 
