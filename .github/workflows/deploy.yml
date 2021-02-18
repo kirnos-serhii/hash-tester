@@ -27,7 +27,7 @@ jobs:
       id: build-image
       env:
         DOCKER_REGISTRY: serhiikirnos
-        DOCKER_REPOSITORY: hash-tester-repo
+        DOCKER_REPOSITORY: hash-tester-repo2
       run: |
         docker build -t $DOCKER_REGISTRY/$DOCKER_REPOSITORY .
         docker push $DOCKER_REGISTRY/$DOCKER_REPOSITORY
