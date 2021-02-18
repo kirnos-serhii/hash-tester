@@ -7,15 +7,6 @@ spring:
   thymeleaf:
     prefix: classpath:/templates
 
-server:
-  port: 443
-  security:
-    require-ssl: true
-  ssl:
-    key-store: key/springboot_letsencrypt.p12
-    keyStoreType: PKCS12
-    keyAlias: bootalias
-
 management:
   endpoints:
     web:
