@@ -8,9 +8,14 @@ spring:
     prefix: classpath:/templates
 
 server:
-  port: 80
+  port: 443
+  security:
+    require-ssl: true
   ssl:
-    enabled: false
+    key-store: key/springboot_letsencrypt.p12
+    key-store-password: ${PROD2_KEY_STORE_PASSWORD}
+    keyStoreType: PKCS12
+    keyAlias: bootalias
 
 management:
   endpoints:
