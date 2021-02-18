@@ -14,7 +14,5 @@ VOLUME /logs
 
 VOLUME /key
 
-ENV PROD2_KEY_STORE_PASSWORD=${PROD2_KEY_STORE_PASSWORD}
-
 ENTRYPOINT ["java", \
 "-jar", "/app.jar"]
